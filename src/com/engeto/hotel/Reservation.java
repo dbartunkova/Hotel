@@ -6,19 +6,24 @@ public class Reservation {
     private Guest guest;
     private LocalDate dateStart;
     private LocalDate dateEnd;
-    private boolean typeOfVacation;
-   // private List<Guest> otherGuests;
+    private boolean isWorking;
 
-    public void setDate(LocalDate dateStart) {
+
+    public void setDateStart(LocalDate dateStart) {
         this.dateStart = dateStart;
     }
     public LocalDate getDateStart() {
         return dateStart;
     }
 
-    public Reservation(Room room, Guest guest, Guest guestAdela) {
+    public Reservation(Room room, Guest guest, boolean isWorking, LocalDate dateStart, LocalDate dateEnd) {
         this.room = room;
         this.guest = guest;
+        this.isWorking = isWorking;
+        this.dateStart = dateStart;
+        this.dateEnd = dateEnd;
+
+
     }
 
     public LocalDate getDateEnd() {
@@ -30,8 +35,11 @@ public class Reservation {
     public String getReservationDescription() {
         return "Jméno hosta/ů: "+guest.getNameSurname() + " a číslo pokoje: " +
                 room.getRoomNumber() + ". " +
-                "Ubytování od: " + dateStart + " do: " + dateEnd + ". ";
+                "Ubytování od: " + dateStart + " do: " + dateEnd + ". " + "Pracovní pobyt: "
+                + isWorking;
     }
+
+
 
 
 }
