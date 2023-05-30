@@ -8,13 +8,6 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        //Guest guestAdela;
-        //guestAdela = new Guest("Adéla Malíková");
-        //guestAdela.setDateOfBirth(LocalDate.of(1993, 3, 13));
-
-        //Guest guestJan;
-        //guestJan = new Guest("Jan Dvořáček");
-        //guestJan.setDateOfBirth(LocalDate.of(1995, 5, 5));
 
         Guest guestKarel;
         guestKarel = new Guest("Karel Dvořák");
@@ -24,7 +17,6 @@ public class Main {
 
         Guest guestAlena;
         guestAlena = new Guest ("Alena Krásová");
-
 
 
         Room room1;
@@ -56,18 +48,6 @@ public class Main {
         //reservation1.setDate(LocalDate.of(2021, 7, 19));
         //reservation1.setDateEnd(LocalDate.of(2021, 7, 26));
 
-        //Reservation reservation2;
-        //reservation2 = new Reservation (room3, guestJan, guestAdela);
-        //reservation2.setDate(LocalDate.of(2021, 9, 1));
-        //reservation2.setDateEnd(LocalDate.of(2021, 9, 14));
-
-        Reservation reservationA;
-        reservationA = new Reservation (room3, guestKarel, true,
-                LocalDate.of(2023, 06, 01), LocalDate.of(2023, 06, 07));
-
-        Reservation reservationB;
-
-       // reservationB = new Reservation(room2,guestABC, false, )
 
         System.out.println("+");
         System.out.println("+");
@@ -75,9 +55,19 @@ public class Main {
         System.out.println("=== Seznam rezervací hotelu ===");
 
 
+        BookingManager bookings = new BookingManager();
+
+        Reservation reservationA;
+        reservationA = new Reservation (room3, guestKarel, true,
+                LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 7));
+
+        bookings.addReservation(reservationA);
+
+
+
+
         List<Reservation> guestList = new ArrayList<>();
-        //guestList.add(reservation1);
-        //guestList.add(reservation2);
+
         guestList.add(reservationA);
 
         for (Reservation reservation : guestList) {
@@ -86,8 +76,22 @@ public class Main {
         BookingManager bookingManager;
         bookingManager = new BookingManager();
 
+        Reservation reservationB;
 
-        //System.out.println(bookingManager.getNumberOfBookings(1));
-        System.out.println(bookingManager.getReservations());
+        for (int i = 1; i < 30; i++){
+            reservationB = new Reservation(room2,guestABC, false,
+                    LocalDate.of(2023, 6, i), LocalDate.of(2023, 6, 2));
+            bookings.addReservation(reservationB);
+            System.out.println(i);
+
+        };
+
+        // bookings.addReservation(reservationB);
+
+
+
+        //System.out.println(bookings.getReservations());
+
+
     }
     }

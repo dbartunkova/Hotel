@@ -3,15 +3,16 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class BookingManager {
-    private List<Reservation> guestList;
+    private List<Reservation> guestList = new ArrayList<>();
+
     int numberOfBookings = 0;
-    List<Reservation> results = new ArrayList<>();
+
     public void addReservation(Reservation newReservation) {
-        results.add(newReservation);
+        guestList.add(newReservation);
     }
 
     public List<Reservation> getReservations() {
-        return new ArrayList<>(results);
+        return new ArrayList<>(guestList);
     }
 
     //public List<Reservation> add(Reservation newReservation) {
@@ -26,16 +27,15 @@ public class BookingManager {
     //public List<Reservation> getGuestList() {
        // return guestList;
     //}
-   public int getGuestList() {
-        return numberOfBookings;
-    }
-    public int getNumberOfBookings(int numberOfBookings) {
-       return this.numberOfBookings = numberOfBookings;
-    }
+   //public int getGuestList() {
+       // return numberOfBookings;
+   // }
+   // public int getNumberOfBookings(int numberOfBookings) {
+      // return this.numberOfBookings = numberOfBookings;
+   // }
     //public List<Reservation> getNumberOfReservation(Reservation reservation) {
         //this guestList += reservation;
-       // return this.guestList;
-   // }
+       /// }
 
 
 }
