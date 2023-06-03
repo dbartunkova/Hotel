@@ -32,12 +32,16 @@ public class Reservation {
     public void setDateEnd(LocalDate dateEnd) {
         this.dateEnd = dateEnd;
     }
+
+
     public String getReservationDescription() {
         return "Jméno hosta/ů: "+guest.getNameSurname() + " a číslo pokoje: " +
                 room.getRoomNumber() + ". " +
                 "Ubytování od: " + dateStart + " do: " + dateEnd + ". " + "Pracovní pobyt: "
                 + isWorking;
     }
+
+
 
 
 

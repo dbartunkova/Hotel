@@ -1,4 +1,5 @@
 package com.engeto.hotel;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -14,28 +15,21 @@ public class BookingManager {
     public List<Reservation> getReservations() {
         return new ArrayList<>(guestList);
     }
-
-    //public List<Reservation> add(Reservation newReservation) {
-       // this.guestList = this.guestList + newReservation;
-       //return this.guestList;
-        //;String
+    public Reservation get(int index) {
+        return guestList.get(index);
+    }
+   // public BigDecimal getNumberOfBookings() {
+      //  BigDecimal result = BigDecimal.ZERO;
+      //  for (Reservation reservation : guestList) {
+         //   result = result.addReservations();
+     //   }
+      //  return result;
     //}
-    //public List<Reservation> getReservations(){
-       // return this.guestList;
-   // }
 
-    //public List<Reservation> getGuestList() {
-       // return guestList;
-    //}
-   //public int getGuestList() {
-       // return numberOfBookings;
-   // }
-   // public int getNumberOfBookings(int numberOfBookings) {
-      // return this.numberOfBookings = numberOfBookings;
-   // }
-    //public List<Reservation> getNumberOfReservation(Reservation reservation) {
-        //this guestList += reservation;
-       /// }
 
+
+// public void getNumberOfBookings(){
+     //   return
+ //   }
 
 }

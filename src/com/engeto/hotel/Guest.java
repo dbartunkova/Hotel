@@ -25,7 +25,7 @@ public class Guest {
         this.nameSurname = nameSurname;
         this.dateOfBirth = dateOfBirth;
     }
-    public Guest(String nameSurname) {
+   public Guest(String nameSurname) {
         this.nameSurname = nameSurname;
     }
 
